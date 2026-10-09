@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Systems and Integration | BrightPath</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a class="skip" href="#content">Skip to content</a>
+
+    <div class="shell">
+
+        <aside class="side">
+            <a class="brand" href="index.html">
+                <span class="brand-name">BrightPath</span>
+                <span class="brand-sub">Information Systems Resource for Higher Education</span>
+            </a>
+
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="data-management.html">Data Management</a></li>
+                    <li><a href="privacy-popia.html">Privacy and POPIA</a></li>
+                    <li><a href="ai-decision-support.html">AI and Decision Support</a></li>
+                    <li><a href="systems-intergration.html" aria-current="page">Systems Integration</a></li>
+                    <li><a href="system-customisation.html">System Customisation</a></li>
+                </ul>
+            </nav>
+
+            <nav class="toc" aria-label="On this page">
+                <h2>On this page</h2>
+                <ol>
+                    <li><a href="#systems">Enterprise systems</a></li>
+                    <li><a href="#failures">Why integration fails</a></li>
+                    <li><a href="#approaches">Integration approaches</a></li>
+                    <li><a href="#brightpath">Applying it to BrightPath</a></li>
+                    <li><a href="#checklist">Manager's checklist</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ol>
+            </nav>
+        </aside>
+
+        <main id="content">
+
+            <header class="hero">
+                <h1>Enterprise Systems and Information Systems Integration</h1>
+
+                <p class="lede">
+                    Higher education institutions use different information systems
+                    to manage students, learning activities, finances and administration.
+                    These systems work best when they can exchange accurate information
+                    securely and efficiently.
+                </p>
+
+                <p>
+                    This page explains the main enterprise systems used by educational
+                    institutions, why integration can fail, and how managers can improve
+                    communication between systems.
+                </p>
+
+                <figure class="roll">
+                    <figcaption>
+                        <strong>One module, three systems.</strong>
+                        BrightPath at the start of a semester. Each dot is one student.
+                    </figcaption>
+
+                    <div class="roll-row">
+                        <p class="roll-label"><strong>LMS</strong> lists 142 students</p>
+                        <div class="dots" data-count="142" data-flag="6" aria-hidden="true"></div>
+                    </div>
+
+                    <div class="roll-row">
+                        <p class="roll-label"><strong>SMS</strong> lists 136 students</p>
+                        <div class="dots" data-count="136" aria-hidden="true"></div>
+                    </div>
+
+                    <div class="roll-row">
+                        <p class="roll-label"><strong>Finance</strong> shows 11 students with outstanding fees</p>
+                        <div class="dots" data-count="11" data-kind="fee" aria-hidden="true"></div>
+                    </div>
+
+                    <p class="legend">
+                        <span><i class="dot dot-flag"></i> the 6-student difference between the LMS and SMS counts</span>
+                        <span><i class="dot dot-fee"></i> outstanding fees</span>
+                    </p>
+                </figure>
+            </header>
+
+            <section id="systems" aria-labelledby="h-systems">
+                <h2 id="h-systems">1. Understanding Enterprise Systems</h2>
+
+                <dl class="systems">
+                    <div>
+                        <dt><span class="abbr">SMS</span> Student Management System</dt>
+                        <dd>
+                            An SMS stores and manages student information, registrations,
+                            module enrolments and academic records.
+                        </dd>
+                    </div>
+                    <div>
+                        <dt><span class="abbr">LMS</span> Learning Management System</dt>
+                        <dd>
+                            An LMS supports online learning by providing learning materials,
+                            assignments, announcements and other learning activities.
+                        </dd>
+                    </div>
+                    <div>
+                        <dt><span class="abbr">FIN</span> Finance System</dt>
+                        <dd>
+                            A finance system manages tuition fees, payments, outstanding
+                            balances and financial records.
+                        </dd>
+                    </div>
+                </dl>
+            </section>
+
+            <section id="failures" aria-labelledby="h-failures">
+                <h2 id="h-failures">2. Why System Integration Fails</h2>
+
+                <dl class="causes">
+                    <div>
+                        <dt>Separate implementations</dt>
+                        <dd>Systems may be introduced at different times without being designed to work together.</dd>
+                    </div>
+                    <div>
+                        <dt>Duplicate records</dt>
+                        <dd>The same student may have different records in different systems.</dd>
+                    </div>
+                    <div>
+                        <dt>Inconsistent data</dt>
+                        <dd>Systems may use different student identifiers, formats or definitions.</dd>
+                    </div>
+                    <div>
+                        <dt>Vendor restrictions</dt>
+                        <dd>Some systems may limit access to their data or provide few integration options.</dd>
+                    </div>
+                    <div>
+                        <dt>Human error</dt>
+                        <dd>Manually copying information between spreadsheets can introduce mistakes.</dd>
+                    </div>
+                    <div>
+                        <dt>Security concerns</dt>
+                        <dd>Poorly planned connections may expose confidential student or financial information.</dd>
+                    </div>
+                </dl>
+            </section>
+
+            <section id="approaches" aria-labelledby="h-approaches">
+                <h2 id="h-approaches">3. Integration Approaches</h2>
+
+                <div class="table-wrap">
+                    <table>
+                        <caption class="visually-hidden">Comparison of three integration approaches</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Approach</th>
+                                <th scope="col">What it does</th>
+                                <th scope="col">Suits</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Application Programming Interfaces (APIs)</th>
+                                <td>
+                                    APIs allow systems to exchange specific information through
+                                    defined requests.
+                                </td>
+                                <td>
+                                    Information that needs to be shared regularly or in near real time.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Middleware</th>
+                                <td>
+                                    Middleware acts as a connecting layer between different systems.
+                                    It can help translate data formats, manage communication and
+                                    coordinate information exchange.
+                                </td>
+                                <td>
+                                    Connecting systems that use different data formats.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Batch Data Transfers</th>
+                                <td>
+                                    Batch transfers move groups of records at scheduled times, such
+                                    as overnight.
+                                </td>
+                                <td>
+                                    Information that does not need to be updated immediately.
+                                    Records can become outdated between transfers.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="brightpath" aria-labelledby="h-brightpath">
+                <h2 id="h-brightpath">4. Applying Integration to BrightPath</h2>
+
+                <p>
+                    BrightPath Higher Education Institute is a fictional private
+                    higher education institution in South Africa. It uses separate
+                    student management, learning management and finance systems.
+                </p>
+
+                <p>
+                    At the start of a semester, its LMS lists 142 students for a
+                    module, while its SMS lists only 136. The finance system also
+                    shows 11 students with outstanding fees. Staff spend two days
+                    comparing spreadsheets to identify the differences.
+                </p>
+
+                <p class="consequence">
+                    As a result, an eligible student is excluded from a group
+                    assignment, while an unregistered student incorrectly receives
+                    access to the module. This creates administrative delays,
+                    confusion and potential privacy and access-control risks.
+                </p>
+
+                <h3>Recommended Improvements</h3>
+
+                <ol class="steps">
+                    <li>Establish which system is the authoritative source for each type of information.</li>
+                    <li>Use secure APIs or middleware to exchange approved information.</li>
+                    <li>Validate student identifiers and module enrolments before updating records.</li>
+                    <li>Set clear rules for how registration and financial status affect system access.</li>
+                    <li>Test changes before implementation and monitor errors after launch.</li>
+                    <li>Restrict access to sensitive data and follow applicable POPIA requirements.</li>
+                    <li>Train staff and provide a process for reporting incorrect records.</li>
+                </ol>
+            </section>
+
+            <section id="checklist" aria-labelledby="h-checklist">
+                <h2 id="h-checklist">5. Manager's Integration Checklist</h2>
+
+                <p>Before choosing or connecting systems, managers should ask:</p>
+
+                <form class="checklist" onsubmit="return false">
+                    <fieldset>
+                        <legend class="visually-hidden">Integration questions to work through</legend>
+
+                        <label><input type="checkbox"> <span>What information needs to be shared, and why?</span></label>
+                        <label><input type="checkbox"> <span>Which system is responsible for maintaining each record?</span></label>
+                        <label><input type="checkbox"> <span>Can the systems exchange data securely and reliably?</span></label>
+                        <label><input type="checkbox"> <span>How will duplicate or incorrect records be identified?</span></label>
+                        <label><input type="checkbox"> <span>Does the approach meet privacy and access-control requirements?</span></label>
+                        <label><input type="checkbox"> <span>What will integration cost, and what support will be needed?</span></label>
+                        <label><input type="checkbox"> <span>How will the institution test, monitor and maintain the integration?</span></label>
+                        <label><input type="checkbox"> <span>Have staff been trained to use the connected systems correctly?</span></label>
+                    </fieldset>
+
+                    <div class="progress">
+                        <span class="bar"><span id="barfill"></span></span>
+                        <p id="progress" aria-live="polite">0 of 8 questions answered</p>
+                    </div>
+                </form>
+            </section>
+
+            <section id="conclusion" aria-labelledby="h-conclusion">
+                <h2 id="h-conclusion">Conclusion</h2>
+
+                <p>
+                    Effective system integration helps an institution maintain
+                    consistent information, reduce repetitive work and improve
+                    decision-making. BrightPath should assess its systems, establish
+                    clear data ownership and introduce a secure, tested integration
+                    approach that meets its needs and budget.
+                </p>
+            </section>
+
+            <aside class="resource" aria-labelledby="h-resource">
+                <h2 id="h-resource">Related Project Resource</h2>
+                <p>
+                    Read the separate BrightPath case study PDF for the full fictional
+                    scenario and its supporting details.
+                </p>
+                <a class="button" href="BrightPath_Case_Study.pdf">Open the BrightPath Case Study PDF</a>
+            </aside>
+
+            <footer>
+                <p>INF1781 Group Project | BrightPath Information Systems Resource</p>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        (function () {
+            /* Draw the student dots in the module roll */
+            document.querySelectorAll('.dots').forEach(function (el) {
+                var total = parseInt(el.dataset.count, 10);
+                var flagged = parseInt(el.dataset.flag || '0', 10);
+                var fee = el.dataset.kind === 'fee';
+                var frag = document.createDocumentFragment();
+                for (var i = 0; i < total; i++) {
+                    var dot = document.createElement('i');
+                    dot.className = 'dot';
+                    if (i >= total - flagged) dot.className += ' dot-flag';
+                    if (fee) dot.className += ' dot-fee';
+                    frag.appendChild(dot);
+                }
+                el.appendChild(frag);
+            });
+
+            /* Checklist progress */
+            var boxes = document.querySelectorAll('.checklist input[type="checkbox"]');
+            var label = document.getElementById('progress');
+            var fill = document.getElementById('barfill');
+            function update() {
+                var done = 0;
+                boxes.forEach(function (b) { if (b.checked) done++; });
+                label.textContent = done + ' of ' + boxes.length + ' questions answered';
+                fill.style.width = (done / boxes.length * 100) + '%';
+            }
+            boxes.forEach(function (b) { b.addEventListener('change', update); });
+            update();
+
+            /* Mark the section being read in the "On this page" list */
+            var links = document.querySelectorAll('.toc a');
+            if ('IntersectionObserver' in window) {
+                var obs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            links.forEach(function (a) {
+                                if (a.getAttribute('href') === '#' + entry.target.id) {
+                                    a.setAttribute('aria-current', 'location');
+                                } else {
+                                    a.removeAttribute('aria-current');
+                                }
+                            });
+                        }
+                    });
+                }, { rootMargin: '-20% 0px -70% 0px' });
+                document.querySelectorAll('main section[id]').forEach(function (s) { obs.observe(s); });
+            }
+        })();
+    </script>
+</body>
+</html>

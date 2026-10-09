@@ -3,10 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrightPath Higher Education Institution</title>
+    <title>Home | BrightPath Information Systems Resource</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>BrightPath Higher Education Institution</h1>
-    <p>Building </p>
+    <a class="skip" href="#content">Skip to content</a>
+
+    <div class="shell">
+
+        <aside class="side">
+            <a class="brand" href="index.html">
+                <span class="brand-name">BrightPath</span>
+                <span class="brand-sub">Information Systems Resource for Higher Education</span>
+            </a>
+
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="data-management.html">Data Management</a></li>
+                    <li><a href="privacy-popia.html">Privacy and POPIA</a></li>
+                    <li><a href="ai-decision-support.html">AI and Decision Support</a></li>
+                    <li><a href="systems-intergration.html">Systems Integration</a></li>
+                    <li><a href="system-customisation.html">System Customisation</a></li>
+                </ul>
+            </nav>
+
+            <nav class="toc" aria-label="On this page">
+                <h2>On this page</h2>
+                <ol>
+                    <li><a href="#topics">Topics</a></li>
+                    <li><a href="#scenario">The BrightPath scenario</a></li>
+                    <li><a href="#case-study">Case study PDF</a></li>
+                </ol>
+            </nav>
+        </aside>
+
+        <main id="content">
+
+            <header class="hero">
+                <h1>How higher education institutions manage information systems</h1>
+
+                <p class="lede">
+                    Students, learning, finances and administration all depend on
+                    information systems. This resource explains how those systems
+                    work, where they go wrong, and what managers can do about it.
+                </p>
+
+                <p>
+                    Every topic is explored through BrightPath Higher Education
+                    Institute, a fictional private institution in South Africa.
+                </p>
+            </header>
+
+            <section id="topics" aria-labelledby="h-topics">
+                <h2 id="h-topics">Topics</h2>
+
+                <ul class="topics">
+                    <li>
+                        <a href="data-management.html">
+                            <span class="t">Data Management</span>
+                            <span class="d">How institutions collect, store and look after student and operational data.</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="privacy-popia.html">
+                            <span class="t">Privacy and POPIA</span>
+                            <span class="d">What the Protection of Personal Information Act means for how personal information is handled.</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ai-decision-support.html">
+                            <span class="t">AI and Decision Support</span>
+                            <span class="d">How AI tools can support decisions in an institution, and where managers need to take care.</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="systems-intergration.html">
+                            <span class="t">Systems Integration</span>
+                            <span class="d">Why student, learning and finance systems fail to connect, and how to improve communication between them.</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="system-customisation.html">
+                            <span class="t">System Customisation</span>
+                            <span class="d">Adapting systems to fit an institution's own processes.</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="scenario" aria-labelledby="h-scenario">
+                <h2 id="h-scenario">The BrightPath scenario</h2>
+
+                <p>
+                    BrightPath uses separate student management, learning management
+                    and finance systems. At the start of a semester, the systems
+                    disagree about who is in one module.
+                </p>
+
+                <figure class="roll">
+                    <figcaption>
+                        <strong>One module, two counts.</strong>
+                        Each dot is one student.
+                    </figcaption>
+
+                    <div class="roll-row">
+                        <p class="roll-label"><strong>LMS</strong> lists 142 students</p>
+                        <div class="dots" data-count="142" data-flag="6" aria-hidden="true"></div>
+                    </div>
+
+                    <div class="roll-row">
+                        <p class="roll-label"><strong>SMS</strong> lists 136 students</p>
+                        <div class="dots" data-count="136" aria-hidden="true"></div>
+                    </div>
+
+                    <p class="legend">
+                        <span><i class="dot dot-flag"></i> the 6-student difference between the two counts</span>
+                    </p>
+                </figure>
+
+                <p>
+                    Staff spend two days comparing spreadsheets to find the
+                    differences. Meanwhile, an eligible student is excluded from a
+                    group assignment and an unregistered student gets access to the
+                    module. The
+                    <a href="systems-integration.html">Systems Integration</a>
+                    page shows how to prevent this.
+                </p>
+            </section>
+
+            <aside class="resource" id="case-study" aria-labelledby="h-resource">
+                <h2 id="h-resource">Case study PDF</h2>
+                <p>
+                    Read the separate BrightPath case study PDF for the full fictional
+                    scenario and its supporting details.
+                </p>
+                <a class="button" href="BrightPath_Case_Study.pdf">Open the BrightPath Case Study PDF</a>
+            </aside>
+
+            <footer>
+                <p>INF1781 Group Project | BrightPath Information Systems Resource</p>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        (function () {
+            /* Draw the student dots */
+            document.querySelectorAll('.dots').forEach(function (el) {
+                var total = parseInt(el.dataset.count, 10);
+                var flagged = parseInt(el.dataset.flag || '0', 10);
+                var frag = document.createDocumentFragment();
+                for (var i = 0; i < total; i++) {
+                    var dot = document.createElement('i');
+                    dot.className = 'dot';
+                    if (i >= total - flagged) dot.className += ' dot-flag';
+                    frag.appendChild(dot);
+                }
+                el.appendChild(frag);
+            });
+
+            /* Mark the section being read in the "On this page" list */
+            var links = document.querySelectorAll('.toc a');
+            if ('IntersectionObserver' in window) {
+                var obs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            links.forEach(function (a) {
+                                if (a.getAttribute('href') === '#' + entry.target.id) {
+                                    a.setAttribute('aria-current', 'location');
+                                } else {
+                                    a.removeAttribute('aria-current');
+                                }
+                            });
+                        }
+                    });
+                }, { rootMargin: '-20% 0px -60% 0px' });
+                document.querySelectorAll('main section[id], main .resource[id]').forEach(function (s) { obs.observe(s); });
+            }
+        })();
+    </script>
 </body>
 </html>
