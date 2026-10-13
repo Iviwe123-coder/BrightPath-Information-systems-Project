@@ -1,207 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy and POPIA | BrightPath Information Systems Resource</title>
+    <title>Data Ethics, Privacy and POPIA | BrightPath</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 
-<body>
-    <a class="skip" href="#content">Skip to content</a>
-
+<body><a class="skip" href="#content">Skip to content</a>
     <div class="shell">
-
         <aside class="side">
-            <a class="brand" href="index.html">
-                <span class="brand-name">BrightPath</span>
-                <span class="brand-sub">Information Systems Resource for Higher Education</span>
-            </a>
-
+            <a class="brand" href="index.html"><span class="brand-name">BrightPath</span><span
+                    class="brand-sub">Information Systems Resource for Higher Education</span></a>
             <nav class="site-nav" aria-label="Main navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="data-management.html">Data Management</a></li>
                     <li><a href="privacy-popia.html" aria-current="page">Privacy and POPIA</a></li>
                     <li><a href="ai-decision-support.html">AI and Decision Support</a></li>
-                    <li><a href="systems-intergration.html">Systems Integration</a></li>
+                    <li><a href="systems-integration.html">Systems Integration</a></li>
                     <li><a href="system-customisation.html">System Customisation</a></li>
                 </ul>
             </nav>
-
             <nav class="toc" aria-label="On this page">
                 <h2>On this page</h2>
                 <ol>
-                    <li><a href="#lawful">POPIA and lawful processing</a></li>
-                    <li><a href="#rights">Rights, retention and security</a></li>
-                    <li><a href="#sensitive">Sensitive situations and breaches</a></li>
-                    <li><a href="#ethics">Ethics and access control</a></li>
+                    <li><a href="#lawful">Lawful processing and POPIA</a></li>
+                    <li><a href="#purpose">Purpose, access and retention</a></li>
+                    <li><a href="#rights">Data subject participation</a></li>
+                    <li><a href="#children">Students under 18 and sensitive information</a></li>
+                    <li><a href="#third-parties">Third-party and cloud-hosted systems</a></li>
+                    <li><a href="#security">Security safeguards and breach response</a></li>
+                    <li><a href="#ethics">Ethical use of student data and analytics</a></li>
                     <li><a href="#sources">Sources</a></li>
                 </ol>
             </nav>
         </aside>
-
         <main id="content">
-
             <header class="hero">
-                <h1>Privacy and POPIA in Higher Education</h1>
-                <p class="lede">
-                    Universities and colleges handle personal information every day, from student applications and marks to staff records and learning-platform activity. South Africa’s Protection of Personal Information Act (POPIA) sets rules for how this information should be collected, used, stored, shared and protected. Responsible information systems must support both legal compliance and respect for the people behind the data.
-                </p>
+                <h1>Data Ethics, Privacy and POPIA</h1>
+                <p class="lede">Topic 2 · student and staff personal information in South African higher education</p>
+                <p>BrightPath is a fictional South African higher education institution. Its student, staff, learning
+                    and finance records can contain personal information, from contact details and marks to payment and
+                    support records. POPIA gives the institution a framework for handling that information lawfully and
+                    responsibly; the practical controls should follow the data through collection, use, sharing, storage
+                    and deletion.</p>
             </header>
-
-            <section id="lawful" aria-labelledby="h-lawful">
-                <h2 id="h-lawful">1. POPIA and lawful processing</h2>
-
-                <p>
-                    POPIA applies to the processing of personal information by public and private organisations, including higher education institutions. Personal information can include a person’s name, identity number, contact details, student number when linked to an identifiable person, academic results, financial details and records of system activity. Institutions should identify a lawful basis for processing information and explain clearly why it is needed.
-                </p>
-
-                <h3>Key principles for handling personal information</h3>
-
-                <ul>
-                    <li><strong>Purpose specification:</strong> Collect information for a specific, clearly defined and lawful purpose related to the institution’s activities. For example, a lecturer may use assessment marks to calculate a module result.</li>
-                    <li><strong>Minimality:</strong> Request only information that is adequate, relevant and not excessive for the stated purpose. A class attendance report usually does not need students’ home addresses.</li>
-                    <li><strong>Openness:</strong> Tell students and staff what information is collected, why it is collected, who may receive it and how they can raise a concern.</li>
-                    <li><strong>Further processing:</strong> Do not automatically reuse information for a new, unrelated purpose. Check whether the new use is compatible with the original purpose and permitted by POPIA.</li>
-                    <li><strong>Information quality:</strong> Take reasonable steps to keep personal information accurate, complete and up to date, especially where errors could affect enrolment, marks or financial aid.</li>
-                    <li><strong>Security safeguards:</strong> Use appropriate technical and organisational measures to prevent loss, damage, unauthorised access or disclosure.</li>
-                </ul>
-
-                <p>
-                    Consent can be an appropriate basis for some activities, but it is not the only possible justification under POPIA. Depending on the circumstances, processing may also be permitted because it is necessary for a contract, a legal obligation, a public-law duty, a legitimate interest or another basis recognised by the Act. Institutions should assess the actual purpose and context rather than treating consent as a universal solution.
-                </p>
+            <section id="lawful">
+                <h2>Lawful processing and POPIA</h2>
+                <p>POPIA sets eight conditions for lawful processing, including accountability, purpose, information
+                    quality, security and data subject participation (sections 4 and 8–25). Consent is one possible
+                    justification, not the only one; section 11 also lists other grounds. BrightPath should document
+                    each process’s purpose and justification, and collect only adequate, relevant and necessary
+                    information. <a href="https://www.justice.gov.za/legislation/acts/2013-004.pdf">(POPIA)</a></p>
             </section>
-
-            <section id="rights" aria-labelledby="h-rights">
-                <h2 id="h-rights">2. Data subject rights, retention and security</h2>
-
-                <p>
-                    POPIA gives people rights in relation to their personal information. Higher education institutions should provide practical ways for students and staff to exercise these rights and should have clear procedures for responding to requests.
-                </p>
-
-                <ul>
-                    <li><strong>Access:</strong> A person may request information about the personal information an institution holds about them, subject to applicable law.</li>
-                    <li><strong>Correction or deletion:</strong> A person may ask for inaccurate, irrelevant, excessive, outdated, incomplete, misleading or unlawfully obtained information to be corrected or deleted, where the Act’s requirements are met.</li>
-                    <li><strong>Objection:</strong> In certain circumstances, a person may object to processing on grounds relating to their particular situation or where direct marketing is involved.</li>
-                    <li><strong>Complaints:</strong> People can raise concerns with the institution and, where appropriate, lodge a complaint with the Information Regulator.</li>
-                </ul>
-
-                <h3>Retention and disposal</h3>
-
-                <p>
-                    Institutions should not keep identifiable personal information indefinitely without a valid reason. Retention periods should reflect the purpose of collection, applicable legislation, contractual obligations, academic-record requirements and legitimate archival needs. When information is no longer needed and no lawful retention requirement applies, it should be securely destroyed, deleted or de-identified. Backups and copies should also be considered in the disposal process.
-                </p>
-
-                <h3>Practical security safeguards</h3>
-
-                <ul>
-                    <li>Use strong authentication and, where appropriate, multi-factor authentication.</li>
-                    <li>Apply role-based access so staff can see only the information required for their duties.</li>
-                    <li>Encrypt sensitive information during transmission and, where suitable, while stored.</li>
-                    <li>Keep systems and software updated, maintain secure backups and test recovery procedures.</li>
-                    <li>Train staff to recognise phishing, protect devices and handle information safely.</li>
-                    <li>Review access logs and permissions regularly, especially when staff change roles or leave.</li>
-                </ul>
-
-                <p>
-                    For example, a lecturer may need access to marks for their own modules, while the finance office needs relevant fee information. Neither role should automatically have unrestricted access to every student record.
-                </p>
+            <section id="purpose">
+                <h2>Purpose, access and retention</h2>
+                <p>BrightPath should explain why it collects information and who may receive it. Reuse must be
+                    compatible with the original purpose or meet an applicable basis in POPIA (sections 13–15). Keep
+                    records only as long as needed or legally required, then securely destroy or de-identify them. Give
+                    staff access according to their role.</p>
             </section>
-
-            <section id="sensitive" aria-labelledby="h-sensitive">
-                <h2 id="h-sensitive">3. Sensitive situations and data breaches</h2>
-
-                <h3>Students under 18</h3>
-
-                <p>
-                    Some students may be children as defined by POPIA. Processing their personal information can trigger additional requirements, and an institution should assess the applicable rules before collecting or sharing it. Where the Act requires prior authorisation from a competent person, the institution must follow that requirement and consider the child’s safety and best interests. Staff should avoid assuming that the same process applies to every student or every type of information.
-                </p>
-
-                <h3>Cloud services and third-party providers</h3>
-
-                <p>
-                    Learning management systems, online assessment tools, video-conferencing platforms and cloud storage may process student or staff information on an institution’s behalf. Before using a provider, the institution should assess security, access controls, data location, subcontractors, backup arrangements, deletion processes and what happens when the contract ends. Written agreements should set out the provider’s responsibilities and require appropriate safeguards. Cross-border transfers must be assessed against POPIA’s requirements for sending personal information outside South Africa.
-                </p>
-
-                <h3>Responding to a security compromise</h3>
-
-                <p>
-                    A breach may involve a lost laptop, a compromised account, a misdirected email, ransomware or unauthorised access to a student database. Institutions should have a documented response process that includes containing the incident, protecting affected systems, preserving evidence, assessing the type and scale of information involved, and notifying the appropriate people and authorities as required by law.
-                </p>
-
-                <p>
-                    Under POPIA, a responsible party generally must notify the Information Regulator and affected data subjects when there are reasonable grounds to believe that personal information has been accessed or acquired by an unauthorised person, subject to the Act’s provisions. Notification should not be delayed unnecessarily; the institution should follow the applicable legal requirements and coordinate the response with its Information Officer and security team.
-                </p>
+            <section id="rights">
+                <h2>Data subject participation</h2>
+                <p>Students and staff may ask whether BrightPath holds their information and request access, correction
+                    or deletion in the circumstances set out in POPIA (sections 23–24). Provide a clear request route
+                    and update connected systems when a correction is accepted. <a
+                        href="https://www.justice.gov.za/legislation/acts/2013-004.pdf">(POPIA)</a></p>
             </section>
-
-            <section id="ethics" aria-labelledby="h-ethics">
-                <h2 id="h-ethics">4. Ethical use of student data and access control</h2>
-
-                <p>
-                    Legal compliance is a minimum requirement, not the whole of responsible data use. Institutions should consider whether a practice is fair, proportionate and understandable to the people affected by it. Student analytics can help identify learners who may need academic support, but poorly designed monitoring or prediction systems can also label students unfairly or expose sensitive circumstances.
-                </p>
-
-                <h3>Questions to ask before using student analytics</h3>
-
-                <ul>
-                    <li>Is the data necessary for a clearly stated educational purpose?</li>
-                    <li>Have students been told how their information will be analysed and how the results may affect them?</li>
-                    <li>Could the data or model produce biased, misleading or discriminatory conclusions?</li>
-                    <li>Can a student ask for an explanation or challenge an inaccurate record or decision?</li>
-                    <li>Who can view individual-level results, and can the same goal be achieved using aggregated or de-identified data?</li>
-                    <li>Is there meaningful human review before analytics influence important decisions about progression, funding or support?</li>
-                </ul>
-
-                <h3>Protecting information shared between systems</h3>
-
-                <p>
-                    Student information often moves between admissions, registration, learning management, finance, library and reporting systems. Each connection creates a possible route for information to be exposed or changed. Institutions should share only the fields needed for the receiving system’s purpose, authenticate connected services, protect data in transit, restrict service accounts, record important transfers and review integrations when systems or contracts change.
-                </p>
-
-                <p>
-                    For example, a dashboard that helps advisors identify students with low attendance may be useful, but it should be visible only to authorised staff and should not expose detailed personal circumstances to every lecturer. The institution should explain the dashboard’s purpose, check data quality, limit access and ensure that a risk indicator supports a conversation rather than automatically determining a student’s future.
-                </p>
+            <section id="children">
+                <h2>Students under 18 and sensitive information</h2>
+                <p>Some students may be under 18. POPIA generally prohibits processing children’s information unless an
+                    exception or Regulator authorisation applies; examples include consent from a competent person or
+                    necessity to establish a legal right (sections 34–35). Special personal information, such as health
+                    details, has separate rules (section 26). Check the specific facts before processing. <a
+                        href="https://www.justice.gov.za/legislation/acts/2013-004.pdf">(POPIA)</a></p>
             </section>
-
-            <section id="sources" aria-labelledby="h-sources">
+            <section id="third-parties">
+                <h2>Third-party and cloud-hosted systems</h2>
+                <p>If a cloud provider hosts BrightPath’s LMS, document each party’s role, approved access, security,
+                    retention and deletion. POPIA requires an operator to act with the responsible party’s authorisation
+                    and be bound by a written security agreement (section 21). Cross-border transfers must meet a
+                    condition in section 72; cloud hosting is not automatically allowed or prohibited. <a
+                        href="https://www.justice.gov.za/legislation/acts/2013-004.pdf">(POPIA)</a></p>
+            </section>
+            <section id="security">
+                <h2>Security safeguards and breach response</h2>
+                <p>BrightPath must use reasonable technical and organisational safeguards (section 19). If there are
+                    reasonable grounds to believe information was accessed by an unauthorised person, the responsible
+                    party must notify the Regulator and affected people as soon as reasonably possible; an operator must
+                    alert the responsible party (section 22). Escalate suspected incidents promptly and follow current
+                    Regulator guidance. <a href="https://www.justice.gov.za/legislation/acts/2013-004.pdf">(POPIA)</a>
+                    <a href="https://inforegulator.org.za/2025/08/19/fact-sheet-handling-of-security-compromises/">(Information
+                        Regulator)</a></p>
+            </section>
+            <section id="ethics">
+                <h2>Ethical use of student data and analytics</h2>
+                <p>A low LMS activity signal may prompt a supportive check-in, but it does not prove disengagement; a
+                    student may study offline or have limited connectivity. Explain indicators, let people correct
+                    errors, restrict access and use human review. POPIA also limits certain solely automated decisions
+                    with legal or substantial effects (section 71). <a
+                        href="https://www.justice.gov.za/legislation/acts/2013-004.pdf">(POPIA)</a></p>
+            </section>
+            <section id="sources">
                 <h2 id="h-sources">Sources</h2>
-
-                <ul class="sources">
-                    <li>Republic of South Africa. (2013). <em>Protection of Personal Information Act 4 of 2013</em>. Government Gazette. <a href="https://www.gov.za/documents/protection-personal-information-act">https://www.gov.za/documents/protection-personal-information-act</a></li>
-                    <li>Information Regulator South Africa. (n.d.). <em>Information Regulator</em>. <a href="https://inforegulator.org.za/">https://inforegulator.org.za/</a></li>
-                    <li>National Institute of Standards and Technology. (2020). <em>Security and Privacy Controls for Information Systems and Organizations</em> (SP 800-53 Rev. 5). <a href="https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final">https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final</a></li>
-                </ul>
+                <ol>
+                    <li><a href="https://www.justice.gov.za/legislation/acts/2013-004.pdf">Protection of Personal
+                            Information Act 4 of 2013</a></li>
+                    <li><a href="https://inforegulator.org.za/guidance-notes/">Information Regulator · Guidance
+                            Notes</a></li>
+                    <li><a
+                            href="https://inforegulator.org.za/knowledge-base/category/popia/chapter-3-conditions-for-lawful-processing/part-a-processing-of-personal-information-in-general/condition-7-security-safeguards/">Information
+                            Regulator · Condition 7 Security Safeguards</a></li>
+                    <li><a href="https://inforegulator.org.za/2025/08/19/fact-sheet-handling-of-security-compromises/">Information
+                            Regulator · Handling of Security Compromises</a></li>
+                </ol>
             </section>
-
             <footer>
                 <p>INF1781 Group Project | BrightPath Information Systems Resource</p>
             </footer>
         </main>
     </div>
-
-    <script>
-        (function () {
-            /* Mark the section being read in the "On this page" list */
-            var links = document.querySelectorAll('.toc a');
-            if ('IntersectionObserver' in window) {
-                var obs = new IntersectionObserver(function (entries) {
-                    entries.forEach(function (entry) {
-                        if (entry.isIntersecting) {
-                            links.forEach(function (a) {
-                                if (a.getAttribute('href') === '#' + entry.target.id) {
-                                    a.setAttribute('aria-current', 'location');
-                                } else {
-                                    a.removeAttribute('aria-current');
-                                }
-                            });
-                        }
-                    });
-                }, { rootMargin: '-20% 0px -70% 0px' });
-                document.querySelectorAll('main section[id]').forEach(function (s) { obs.observe(s); });
-            }
-        })();
-    </script>
 </body>
+
 </html>
